@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DigitalVoting.Data.Models.Ballot>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ballot Collection</h2>
+
+<table id="ballots" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Release Year</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ballot in Model)
+        {
+            <tr>
+                @*<td>@Html.ActionLink(ballot.Name, "Edit", "Ballots", new { id = ballot.Id }, null)</td>*@
+                <td>@ballot.Name</td>
+                <td>@ballot.Type</td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", "Vinyls", new { id = ballot.Id }, null)
+                    @*@Html.ActionLink("Delete", "Delete", "Vinyls", null, new { @class = "btn btn-primary" })*@
+                    @*<button data-vinyl-id="@vinyl.Id" class="btn btn-default btn-sm js-toggle-delete">Delete</button>*@
+                </td>
+                <td> @Html.ActionLink("Details", "Details", "Vinyls", new { id = ballot.Id }, null)</td>
+                <td><button data-vinyl-id="@ballot.Id" class="btn btn-default btn-sm pull-right js-toggle-cart">Add To Cart</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<p>
+    @Html.ActionLink("New Ballot", "Create", "Ballots", null, new { @class = "btn btn-primary" })
+</p>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(".js-toggle-cart").click(function (e) {
+                var button = $(e.target)
+                $.post("/api/carts", { vinylId: button.attr("data-ballot-id") })
+                    .done(function () {
+                        button
+                            .removeClass("btn-default")
+                            .addClass("btn-info")
+                            .text("Added");
+                    })
+                    .fail(function () {
+                        alert("Something Failed")
+                    });
+            });
+        }); debugger;
+
+
+    </script>
+}
+
