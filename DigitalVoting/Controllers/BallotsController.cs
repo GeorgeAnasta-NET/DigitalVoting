@@ -74,5 +74,18 @@ namespace DigitalVoting.Controllers
 
             return RedirectToAction("Index", "Ballots");
         }
+
+        public ActionResult Delete(int Id)
+        {
+            var ballot = context.Ballots
+                .Where(b => b.Id == Id)
+                .Include(t => t.Type)
+                .SingleOrDefault();
+
+            context.Ballots.Remove(ballot);
+            context.SaveChanges();
+
+            return RedirectToAction("Index", "Ballots");
+        }
     }
 }
