@@ -12,5 +12,18 @@ namespace DigitalVoting.Models
         public string Name { get; set; }
         public int TypeId { get; set; }
         public BallotType Type { get; set; }
+        public DateTime DateCreated
+        {
+            get
+            {
+                return this.dateCreated.HasValue
+                   ? this.dateCreated.Value
+                   : DateTime.Now;
+            }
+
+            set { this.dateCreated = value; }
+        }
+
+        private DateTime? dateCreated = null;
     }
 }

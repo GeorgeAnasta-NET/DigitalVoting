@@ -23,6 +23,7 @@ namespace DigitalVoting.Controllers
             var model = context.Ballots
                 .Include(t => t.Type)
                 .ToList();
+
             return View(model);
         }
 

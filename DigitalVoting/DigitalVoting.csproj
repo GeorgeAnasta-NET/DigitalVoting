@@ -189,6 +189,10 @@
     <Compile Include="Migrations\202011151710581_digitalVoting.Designer.cs">
       <DependentUpon>202011151710581_digitalVoting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011151817000_dateCreatedatBallot.cs" />
+    <Compile Include="Migrations\202011151817000_dateCreatedatBallot.Designer.cs">
+      <DependentUpon>202011151817000_dateCreatedatBallot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011151710581_digitalVoting.resx">
       <DependentUpon>202011151710581_digitalVoting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011151817000_dateCreatedatBallot.resx">
+      <DependentUpon>202011151817000_dateCreatedatBallot.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
