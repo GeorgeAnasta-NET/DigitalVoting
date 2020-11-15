@@ -10,7 +10,7 @@
         <tr>
             <th>Name</th>
             <th>Type</th>
-            <th>Release Year</th>
+            <th>Created</th>
             <th></th>
             <th></th>
             <th></th>
@@ -23,13 +23,14 @@
                 @*<td>@Html.ActionLink(ballot.Name, "Edit", "Ballots", new { id = ballot.Id }, null)</td>*@
                 <td>@ballot.Name</td>
                 <td>@ballot.Type</td>
+                <td></td>
                 <td>
-                    @Html.ActionLink("Delete", "Delete", "Vinyls", new { id = ballot.Id }, null)
+                    @Html.ActionLink("Delete", "Delete", "Ballots", new { id = ballot.Id }, null)
                     @*@Html.ActionLink("Delete", "Delete", "Vinyls", null, new { @class = "btn btn-primary" })*@
                     @*<button data-vinyl-id="@vinyl.Id" class="btn btn-default btn-sm js-toggle-delete">Delete</button>*@
                 </td>
-                <td> @Html.ActionLink("Details", "Details", "Vinyls", new { id = ballot.Id }, null)</td>
-                <td><button data-vinyl-id="@ballot.Id" class="btn btn-default btn-sm pull-right js-toggle-cart">Add To Cart</button></td>
+                <td> @Html.ActionLink("Details", "Details", "Ballots", new { id = ballot.Id }, null)</td>
+                <td><button data-ballot-id="@ballot.Id" class="btn btn-default btn-sm pull-right js-toggle-cart">Add To Cart</button></td>
             </tr>
         }
     </tbody>
