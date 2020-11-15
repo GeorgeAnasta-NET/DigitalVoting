@@ -1,4 +1,4 @@
-﻿using DigitalVoting.Data.Services;
+﻿using DigitalVoting.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +9,16 @@ namespace DigitalVoting.Controllers
 {
     public class HomeController : Controller
     {
-        IBallotData db;
+        private ApplicationDbContext context;
 
         public HomeController()
         {
-            db = new InMemoryBallotData();
+            context = new ApplicationDbContext();
         }
 
         public ActionResult Index()
         {
-            var model = db.GetAll();
+            var model = context.InMemoryBallotData();
             return View(model);
         }
 

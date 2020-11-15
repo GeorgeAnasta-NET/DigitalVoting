@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DigitalVoting.Data.Models
+namespace DigitalVoting.Models
 {
     public class Ballot
     {

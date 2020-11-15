@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalVoting", "DigitalVoting\DigitalVoting.csproj", "{4BD41466-22E3-4603-B686-FF44C78F2060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalVoting.Data", "DigitalVoting.Data\DigitalVoting.Data.csproj", "{1FD18400-3A1C-4860-A109-3398D705138B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{4BD41466-22E3-4603-B686-FF44C78F2060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BD41466-22E3-4603-B686-FF44C78F2060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BD41466-22E3-4603-B686-FF44C78F2060}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FD18400-3A1C-4860-A109-3398D705138B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FD18400-3A1C-4860-A109-3398D705138B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FD18400-3A1C-4860-A109-3398D705138B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FD18400-3A1C-4860-A109-3398D705138B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

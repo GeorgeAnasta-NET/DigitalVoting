@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Ballot.cs" />
-    <Compile Include="Models\BallotType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IBallotData.cs" />
     <Compile Include="Services\InMemoryBallotData.cs" />
