@@ -10,6 +10,7 @@ namespace DigitalVoting.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public int TypeId { get; set; }
         public BallotType Type { get; set; }
     }
 }

@@ -1,0 +1,33 @@
+﻿@model DigitalVoting.ViewModels.BallotFormViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Add A Ballot</h2>
+
+@using (Html.BeginForm("Save", "Ballots"))
+{
+    <p class="alert alert-info">All Fields are Required</p>
+    @Html.ValidationSummary(true, "Please fix the following errors.")
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", autofocus = "autofocus" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    @*<div class="form-group">
+        @Html.LabelFor(m => m.ReleaseYear)
+        @Html.TextBoxFor(m => m.ReleaseYear, new { @class = "form-control", placeholder = "eg 4 Dec 2019" })
+        @Html.ValidationMessageFor(m => m.ReleaseYear)
+    </div>*@
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.BallotType)
+        @Html.DropDownListFor(m => m.BallotType, new SelectList(Model.BallotTypes, "Id", "Name"), "--Select--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.BallotType)
+    </div>
+    
+    @Html.HiddenFor(m => m.Id)
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Save</button>
+}

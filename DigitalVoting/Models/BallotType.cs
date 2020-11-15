@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DigitalVoting.Models
 {
-    public enum BallotType
+    public class BallotType
     {
-        None,
-        Teachers,
-        Students
+        public int Id { get; set; }
+
+        public string Name { get; set; }
     }
 }
