@@ -25,5 +25,6 @@ namespace DigitalVoting.Models
         }
 
         private DateTime? dateCreated = null;
+        public bool IsDeleted { get; set; }
     }
 }

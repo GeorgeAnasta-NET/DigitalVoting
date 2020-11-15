@@ -82,7 +82,10 @@ namespace DigitalVoting.Controllers
                 .Include(t => t.Type)
                 .SingleOrDefault();
 
-            context.Ballots.Remove(ballot);
+            //Soft Delete
+            ballot.IsDeleted = true;
+            //Hard delete
+            //context.Ballots.Remove(ballot);
             context.SaveChanges();
 
             return RedirectToAction("Index", "Ballots");

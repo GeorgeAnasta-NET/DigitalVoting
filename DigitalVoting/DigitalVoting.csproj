@@ -193,6 +193,10 @@
     <Compile Include="Migrations\202011151817000_dateCreatedatBallot.Designer.cs">
       <DependentUpon>202011151817000_dateCreatedatBallot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011151832246_IsDeletedInBallot.cs" />
+    <Compile Include="Migrations\202011151832246_IsDeletedInBallot.Designer.cs">
+      <DependentUpon>202011151832246_IsDeletedInBallot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -290,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011151817000_dateCreatedatBallot.resx">
       <DependentUpon>202011151817000_dateCreatedatBallot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011151832246_IsDeletedInBallot.resx">
+      <DependentUpon>202011151832246_IsDeletedInBallot.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
