@@ -37,6 +37,27 @@ namespace DigitalVoting.Controllers
             return View(viewModel);
         }
 
+        public ActionResult Edit(int Id)
+        {
+            var ballot = context.Ballots.SingleOrDefault(b => b.Id == Id);
+            var ballotType = context.BallotTypes.ToList();
+
+            if (ballot == null)
+            {
+                return HttpNotFound();
+            }
+
+            var ballotModel = new BallotFormViewModel()
+            {
+                Id = ballot.Id,
+                Name = ballot.Name,
+                BallotType = (byte)ballot.TypeId,
+                BallotTypes = ballotType
+            };
+
+            return View("BallotForm", ballotModel);
+        }
+
         public ActionResult Save(BallotFormViewModel ballotModel)
         {
             if (!ModelState.IsValid)
@@ -59,17 +80,12 @@ namespace DigitalVoting.Controllers
                 };
                 context.Ballots.Add(ballot);
             }
-            //else  //Edit
-            //{
-            //    var vinylDb = context.Vinyls.SingleOrDefault(v => v.Id == vinylModel.Id);
-            //    // autes oi tesseris grammes mporeis na peis oti einai i whiteList
-            //    vinylDb.Title = vinylModel.Title;
-            //    vinylDb.Artist = vinylModel.Artist;
-            //    vinylDb.ReleaseYear = vinylModel.ReleaseYear;
-            //    vinylDb.GenreId = vinylModel.Genre;
-            //    vinylDb.LabelId = vinylModel.Label;
-            //    vinylDb.Price = vinylModel.Price;
-            //}
+            else  //Edit
+            {
+                var ballotDb = context.Ballots.SingleOrDefault(b => b.Id == ballotModel.Id);
+                ballotDb.Name = ballotModel.Name;
+                ballotDb.TypeId = ballotModel.BallotType;
+            }
             context.SaveChanges();
 
             return RedirectToAction("Index", "Ballots");
