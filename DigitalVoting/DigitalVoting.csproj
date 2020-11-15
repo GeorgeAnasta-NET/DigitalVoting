@@ -181,6 +181,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011151618238_InitialCreate.cs" />
+    <Compile Include="Migrations\202011151618238_InitialCreate.Designer.cs">
+      <DependentUpon>202011151618238_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011151710581_digitalVoting.cs" />
+    <Compile Include="Migrations\202011151710581_digitalVoting.Designer.cs">
+      <DependentUpon>202011151710581_digitalVoting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -268,6 +276,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011151618238_InitialCreate.resx">
+      <DependentUpon>202011151618238_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011151710581_digitalVoting.resx">
+      <DependentUpon>202011151710581_digitalVoting.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

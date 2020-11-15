@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace DigitalVoting.Controllers
 {
@@ -19,7 +20,9 @@ namespace DigitalVoting.Controllers
 
         public ActionResult Index()
         {
-            var model = context.InMemoryBallotData();
+            var model = context.Ballots
+                .Include(t => t.Type)
+                .ToList();
             return View(model);
         }
 
