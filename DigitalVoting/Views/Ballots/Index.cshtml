@@ -27,9 +27,9 @@
                     <td>@ballot.Type.Name</td>
                     <td>@ballot.DateCreated</td>
                     <td>
-                        @Html.ActionLink("Delete", "Delete", "Ballots", new { id = ballot.Id }, null)
+                        @Html.ActionLink("Delete", "Delete", "Ballots", null, new { @class = "btn btn-primary" })
                         @*@Html.ActionLink("Delete", "Delete", "Vinyls", null, new { @class = "btn btn-primary" })*@
-                        @*<button data-vinyl-id="@vinyl.Id" class="btn btn-default btn-sm js-toggle-delete">Delete</button>*@
+                        @*<button data-ballot-id="@ballot.Id" class="btn btn-default btn-sm js-toggle-delete">Delete</button>*@
                     </td>
                     <td> @Html.ActionLink("Details", "Details", "Ballots", new { id = ballot.Id }, null)</td>
                     <td><button data-ballot-id="@ballot.Id" class="btn btn-default btn-sm pull-right js-toggle-cart">Add To Cart</button></td>
