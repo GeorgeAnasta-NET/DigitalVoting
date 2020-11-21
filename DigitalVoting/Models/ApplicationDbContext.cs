@@ -11,7 +11,8 @@ namespace DigitalVoting.Models
     {
         public DbSet<Ballot> Ballots { get; set; }
         public DbSet<BallotType> BallotTypes { get; set; }
-
+        public DbSet<Voter> Voters { get; set; }
+        
         public ApplicationDbContext()
             : base("DigitalVotingDb", throwIfV1Schema: false)
         {

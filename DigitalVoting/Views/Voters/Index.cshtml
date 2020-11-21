@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DigitalVoting.Models.Voter>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Voters</h2>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Voter</th>
+                <th>Voted</th>
+            </tr>
+        </thead>
+        @foreach (var viewer in Model)
+        {
+            <tr>
+                <td>@viewer.Name</td>@*papers>--17*@
+                <td>
+                    @if (viewer.Voted)
+                    {
+                        <input type="checkbox" onclick="return true;" />
+                    }
+                    else
+                    {
+                        <input type="checkbox" onclick="return false;" />
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+

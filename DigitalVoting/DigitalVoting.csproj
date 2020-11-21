@@ -197,6 +197,10 @@
     <Compile Include="Migrations\202011151832246_IsDeletedInBallot.Designer.cs">
       <DependentUpon>202011151832246_IsDeletedInBallot.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011212125141_CratngVoterTable.cs" />
+    <Compile Include="Migrations\202011212125141_CratngVoterTable.Designer.cs">
+      <DependentUpon>202011212125141_CratngVoterTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -269,6 +273,7 @@
     <Content Include="Views\Ballots\Index.cshtml" />
     <Content Include="Views\Ballots\Create.cshtml" />
     <Content Include="Views\Ballots\BallotForm.cshtml" />
+    <Content Include="Views\Voters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -298,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011151832246_IsDeletedInBallot.resx">
       <DependentUpon>202011151832246_IsDeletedInBallot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011212125141_CratngVoterTable.resx">
+      <DependentUpon>202011212125141_CratngVoterTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
