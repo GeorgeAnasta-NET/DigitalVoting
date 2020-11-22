@@ -23,7 +23,7 @@ namespace DigitalVoting.Models
         private Notification(NotificationType type, Ballot ballot)
         {
             if (ballot == null)
-                throw new ArgumentNullException("gig");
+                throw new ArgumentNullException("ballot");
 
             Type = type;
             Ballot = ballot;
@@ -35,11 +35,10 @@ namespace DigitalVoting.Models
             return new Notification(NotificationType.BallotCreated, ballot);
         }
 
-        public static Notification BallotUpdated(Ballot newGig, DateTime originalDateTime, string originalVenue)
+        public static Notification BallotUpdated(Ballot newBallot, DateTime originalDateTime)
         {
-            var notification = new Notification(NotificationType.BallotUpdated, newGig);
+            var notification = new Notification(NotificationType.BallotUpdated, newBallot);
             notification.OriginalDateTime = originalDateTime;
-            notification.OriginalVenue = originalVenue;
 
             return notification;
         }
