@@ -25,6 +25,12 @@ namespace DigitalVoting.Models
         }
 
         private DateTime? dateCreated = null;
+
+        public int CandidateId { get; set; }
+        public Candidate Candidate { get; set; }
+        
+        public IEnumerable<Candidate> Candidates { get; set; }
+
         public bool IsDeleted { get; set; }
     }
 }

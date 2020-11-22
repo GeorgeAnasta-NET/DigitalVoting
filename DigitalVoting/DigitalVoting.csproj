@@ -201,6 +201,18 @@
     <Compile Include="Migrations\202011212125141_CratngVoterTable.Designer.cs">
       <DependentUpon>202011212125141_CratngVoterTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011221438331_Add_ApplicationUser_In_Ballot.cs" />
+    <Compile Include="Migrations\202011221438331_Add_ApplicationUser_In_Ballot.Designer.cs">
+      <DependentUpon>202011221438331_Add_ApplicationUser_In_Ballot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011221445518_FixDbNames.cs" />
+    <Compile Include="Migrations\202011221445518_FixDbNames.Designer.cs">
+      <DependentUpon>202011221445518_FixDbNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011221501496_MinorFixes.cs" />
+    <Compile Include="Migrations\202011221501496_MinorFixes.Designer.cs">
+      <DependentUpon>202011221501496_MinorFixes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -306,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011212125141_CratngVoterTable.resx">
       <DependentUpon>202011212125141_CratngVoterTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221438331_Add_ApplicationUser_In_Ballot.resx">
+      <DependentUpon>202011221438331_Add_ApplicationUser_In_Ballot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221445518_FixDbNames.resx">
+      <DependentUpon>202011221445518_FixDbNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221501496_MinorFixes.resx">
+      <DependentUpon>202011221501496_MinorFixes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

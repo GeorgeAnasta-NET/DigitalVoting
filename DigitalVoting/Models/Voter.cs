@@ -5,7 +5,7 @@ using System.Web;
 
 namespace DigitalVoting.Models
 {
-    public class Voter
+    public class Candidate
     {
         public int Id { get; set; }
         public string Name { get; set; }

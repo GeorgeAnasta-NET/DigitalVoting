@@ -20,5 +20,9 @@ namespace DigitalVoting.ViewModels
         {
             Id = 0;
         }
+
+        public int CandidateId { get; set; }
+
+        public IEnumerable<Candidate> Candidates { get; set; }
     }
 }

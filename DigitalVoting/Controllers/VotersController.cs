@@ -25,7 +25,7 @@ namespace DigitalVoting.Controllers
         public ActionResult Index()
         {
             //var viewers = context.Viewers; //GetViewers();//papers
-            var voters = context.Voters
+            var voters = context.Candidates
                 .ToList();
 
             //var viewers = new List<Viewer>
