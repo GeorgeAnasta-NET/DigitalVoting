@@ -213,6 +213,10 @@
     <Compile Include="Migrations\202011221501496_MinorFixes.Designer.cs">
       <DependentUpon>202011221501496_MinorFixes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011221647087_MinorFixesInModels.cs" />
+    <Compile Include="Migrations\202011221647087_MinorFixesInModels.Designer.cs">
+      <DependentUpon>202011221647087_MinorFixesInModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011221501496_MinorFixes.resx">
       <DependentUpon>202011221501496_MinorFixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221647087_MinorFixesInModels.resx">
+      <DependentUpon>202011221647087_MinorFixesInModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
