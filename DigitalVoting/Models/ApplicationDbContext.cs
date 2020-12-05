@@ -9,7 +9,7 @@ namespace DigitalVoting.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DigitalVotingDbContext", throwIfV1Schema: false)
         {
         }
 
