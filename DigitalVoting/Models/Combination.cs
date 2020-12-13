@@ -9,5 +9,8 @@ namespace DigitalVoting.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public string CandidateId { get; set; }
+        public ApplicationUser Candidate { get; set; }
     }
 }
