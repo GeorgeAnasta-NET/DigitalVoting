@@ -12,5 +12,8 @@ namespace DigitalVoting.Models
 
         public string CandidateId { get; set; }
         public ApplicationUser Candidate { get; set; }
+
+        public int BallotId { get; set; }
+        public Ballot Ballot { get; set; }
     }
 }

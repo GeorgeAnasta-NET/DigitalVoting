@@ -19,9 +19,9 @@ else
         </thead>
         @foreach (var ballot in Model)
         {
-            <tr>
-                <td>@Html.ActionLink(ballot.Name, "Edit", "Ballot",null) </td >@*, new { id = ballot.id }, null)*@
-            </tr>
+        <tr>
+            <td>@Html.ActionLink(ballot.Name, "Details", "Ballots", null)</td>@*, new { id = ballot.id }*@
+        </tr>
         }
     </table>
 

@@ -5,6 +5,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DigitalVoting.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace DigitalVoting.Controllers
 {
@@ -25,9 +27,26 @@ namespace DigitalVoting.Controllers
             return View(ballots);
         }
 
-        public ActionResult Create()
+        public ActionResult Details(int Id)
         {
-            return View();
+            var ballot = _context.Ballots.SingleOrDefault(b => b.Id == Id);
+            if (ballot == null)
+                return HttpNotFound();
+            if (ballot.CandidateId == null)
+                return HttpNotFound();
+            if (ballot.Combinations == null)
+                return HttpNotFound();
+            //var viewModel = new BallotDetailsViewModel { Ballot = ballot };
+
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    var userId = User.Identity.GetUserId();
+
+            //    viewModel.IsCombinations = _context.Combinations
+            //        .Any(c => c.BallotId == ballot.Id && c.CandidateId == userId);
+            //}
+
+            return View(ballot);
         }
     }
 }
