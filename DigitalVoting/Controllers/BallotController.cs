@@ -26,16 +26,26 @@ namespace DigitalVoting.Controllers
 
             return View(ballots);
         }
-
+        //thelei authenticate
+        // πρέπει να δουμε τους υποψηφίους του Ψηφοδελτίου στο VIEW
+        //πρέπει να φτιάξουμε και τους συνδιασμους του ψηφοδελτίου, προχωράμε ετσι για αρχή
         public ActionResult Details(int Id)
         {
-            var ballot = _context.Ballots.SingleOrDefault(b => b.Id == Id);
-            if (ballot == null)
-                return HttpNotFound();
-            if (ballot.CandidateId == null)
-                return HttpNotFound();
-            if (ballot.Combinations == null)
-                return HttpNotFound();
+            var ballot = _context.Ballots.Include(b => b.Candidate).SingleOrDefault(b => b.Id == Id);
+            try
+            {
+                if (ballot == null)
+                    throw new Exception("We cann't find Ballot");
+                if (ballot.CandidateId == null)
+                    throw new Exception("We cann't find Candidate");
+                if (ballot.Combinations == null)
+                    throw new Exception("We cann't find Combinations");
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            
             //var viewModel = new BallotDetailsViewModel { Ballot = ballot };
 
             //if (User.Identity.IsAuthenticated)
