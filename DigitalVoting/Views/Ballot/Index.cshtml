@@ -19,11 +19,15 @@ else
         </thead>
         @foreach (var ballot in Model)
         {
-        <tr>
-            <td>@Html.ActionLink(ballot.Name, "Details", "Ballot", new { id = ballot.Id }, null)</td>@*, new { id = ballot.id }*@
-        </tr>
+            <tr>
+                <td>@Html.ActionLink(ballot.Name, "Details", "Ballot", new { id = ballot.Id }, null)</td>@*, new { id = ballot.id }*@
+            </tr>
         }
     </table>
+
+    <p>
+        @Html.ActionLink("Add New Ballot", "Create", "Ballot", null, new { @class = "btn btn-primary" })
+    </p>
 
 }
 
