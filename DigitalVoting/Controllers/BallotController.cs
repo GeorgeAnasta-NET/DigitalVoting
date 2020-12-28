@@ -58,5 +58,13 @@ namespace DigitalVoting.Controllers
 
             return View(ballot);
         }
+
+        //Για να γίνει create ενα ψηφοδέλτιο πρέπει να δούμε αν αφορά combinations ή όχι
+        //Εν συνεχεία, να γίνει εισαγωγή excel αρχείου με τους υποψηφίους
+        //και μετά να γίνει η δημιουργία
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }
